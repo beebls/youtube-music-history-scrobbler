@@ -28,6 +28,8 @@ The rest is automatic and it should produce one or more _formatted.json_ files w
 I reccommend [Last.fm-Scrubbler-WPF](https://github.com/SHOEGAZEssb/Last.fm-Scrubbler-WPF) and it's File Parse Scrobble,
 but others should work.
 
+## Issues ()
+
 #### Issues with YouTube Music
 
 YouTube Music has no way to export your history. The only way you can is by going to takeout.google.com and exporting your
@@ -50,3 +52,16 @@ leading to a ~90% success rate in getting album names.
 
 Last.fm only allows for 3000 scrobbles per day before it limits your account,
 this program will generate multiple files if the input is over 3000 songs, but you have to remember to only upload one per day.
+
+#### Issues with the program
+
+The YouTube Music API errored consistently after ~1900 requests being sent, so to counter this, the program sends requests in batches of 1000
+
+Each batch calls the API and provides the same callback function.
+The API requests return out of order and at different times, so there is no orderly way of managing the return data.
+Additionally, not all requests end up returning any data, some return undefined or error.
+
+This means that while I can easily associate album data with the song it belongs to,
+knowing when all of the requests have returned is more complicated.
+To fix this in the short term I added a small "padding" of 5 requests lost per batch, and while it works, it is nowhere near as
+orderly or redundant as I wish it could be.
