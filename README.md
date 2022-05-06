@@ -1,15 +1,11 @@
 # Youtube Music History Scrobbler
 
-## Upload your YTM history to Last.fm
-
-### Why?
-
 After recently starting to use Last.fm, I wondered if there was a way to import my previous listening.
 I found solutions for Spotify and other services, but none for YTM.
 
 So I made one myself.
 
-### How To Use:
+## How To Use:
 
 You first need to go to [Google Takeout](https://takeout.google.com/) and download your youtube data in JSON format.
 First uncheck all of the categories except "_YouTube and YouTube Music_"
@@ -26,7 +22,7 @@ then, simply run **Start.bat** (or run node index.js in a terminal).
 _Due to all of the API requests, it is not the most stable and may end prematurely,_
 _if this happens, just restart it and it should work_
 
-### What To Do Once You Get The File
+## What To Do Once You Get The File
 
 The rest is automatic and it should produce one or more _formatted.json_ files which you can upload to a bulk scrobbler.
 I reccommend [Last.fm-Scrubbler-WPF](https://github.com/SHOEGAZEssb/Last.fm-Scrubbler-WPF) and it's File Parse Scrobble,

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "youtube-music-api": "^1.0.6"
+  }
+}
