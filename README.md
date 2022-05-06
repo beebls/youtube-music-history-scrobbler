@@ -28,7 +28,7 @@ The rest is automatic and it should produce one or more _formatted.json_ files w
 I reccommend [Last.fm-Scrubbler-WPF](https://github.com/SHOEGAZEssb/Last.fm-Scrubbler-WPF) and it's File Parse Scrobble,
 but others should work.
 
-## Issues ()
+## Issues
 
 #### Issues with YouTube Music
 
@@ -53,7 +53,7 @@ leading to a ~90% success rate in getting album names.
 Last.fm only allows for 3000 scrobbles per day before it limits your account,
 this program will generate multiple files if the input is over 3000 songs, but you have to remember to only upload one per day.
 
-#### Issues with the program
+#### Issues with the code
 
 The YouTube Music API errored consistently after ~1900 requests being sent, so to counter this, the program sends requests in batches of 1000
 
